@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+         https://www.springframework.org/schema/context
+          https://www.springframework.org/schema/context/spring-context.xsd" >
+          
+    <!-- constuctor primitive injection     
+    <bean name="person" class="com.springcore.constructor.Person">
+       <constructor-arg value="prachi" type="String">
+       </constructor-arg>
+       <constructor-arg value="1"></constructor-arg>
+     </bean>-->  
+     
+     <!-- using refernce-->
+     <bean name="cer" class="com.springcore.constructor.Certi">
+         <constructor-arg value="Raut"></constructor-arg>
+     </bean>
+     
+      <bean name="person" class="com.springcore.constructor.Person">
+       <constructor-arg value="prachi" type="String"></constructor-arg>
+       <constructor-arg value="1"></constructor-arg>
+       <constructor-arg ref="cer"></constructor-arg>
+     </bean> 
+     
+     <!-- using schema
+     
+     <bean name="cer" class "com.springcore.constructor.Certi" c:fname="raut"/>
+      <bean name="person" class="com.springcore.constructor.Person">
+       <constructor-arg value="prachi" type="String"></constructor-arg>
+       <constructor-arg value="1"></constructor-arg>
+       <constructor-arg ref="cer"></constructor-arg>
+     </bean> -->
+     
+     <bean name="add"  class="com.springcore.constructor.Addition">
+     	<constructor-arg value="25"/>
+     	<constructor-arg value="12"/>
+     </bean>
+   
+</beans>

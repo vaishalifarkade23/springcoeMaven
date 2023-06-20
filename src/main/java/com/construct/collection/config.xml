@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+         https://www.springframework.org/schema/context
+          https://www.springframework.org/schema/context/spring-context.xsd" >
+    
+   <bean name="emp" class="com.construct.collection.Emp" >
+   <constructor-arg  name="name" value="prachi"></constructor-arg>
+   <constructor-arg name="phones">
+   	<list>
+   	  <value>5328</value>
+   	  <value>8572</value>
+   	</list>
+   </constructor-arg>
+   <constructor-arg name="addresses">
+   	<set>
+   		<value>pune</value>
+   		<value>nagpur</value>
+   	</set>
+   </constructor-arg>
+   <constructor-arg name="courses">
+   		<map>
+   			<entry key="java" value="3 m"></entry>
+   			<entry key="php" value="2 m"></entry>
+   		</map>
+   </constructor-arg>
+   </bean>
+</beans>
